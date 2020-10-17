@@ -72,7 +72,7 @@ def handle_message(event):
                                 )
                             ),
                                 
-                        )
+                        ),
                     )
                 )    
     elif msg == "關於瑋彥":
