@@ -85,7 +85,7 @@ def handle_message(event):
                                     URIAction(
                                         label='學測倒數',
                                         uri='https://www.instagram.com/ar/1507952719375055'
-                                    )，
+                                    ),
                                     MessageTemplateAction(
                                         label='youtube',
                                         text='youtube'
