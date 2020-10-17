@@ -73,31 +73,31 @@ def handle_message(event):
                         )
                     )
                 )
-    elif msg == "IG濾鏡":
-                    line_bot_api.reply_message(  # 回復傳入的訊息文字
-                    event.reply_token,
-                    TemplateSendMessage(
-                        alt_text='Buttons template',
-                        template=ButtonsTemplate(
-                            title='瑋彥的作品集',
-                            text='請選擇作品',
-                            actions=[
-                                URITemplateAction(
-                                    label='IG濾鏡',
-                                    uri='https://www.instagram.com/ar/1507952719375055/'
-                                ),
-                                MessageTemplateAction(
-                                    label='youtube',
-                                    text='youtubeㄛ'
-                                ),
-                                MessageTemplateAction(
-                                    label='網頁',
-                                    text='網頁'
-                                )
-                            ]
+        if msg == "IG濾鏡":
+                        line_bot_api.reply_message(  # 回復傳入的訊息文字
+                        event.reply_token,
+                        TemplateSendMessage(
+                            alt_text='Buttons template',
+                            template=ButtonsTemplate(
+                                title='瑋彥的作品集',
+                                text='請選擇作品',
+                                actions=[
+                                    URITemplateAction(
+                                        label='IG濾鏡',
+                                        uri='https://www.instagram.com/ar/1507952719375055/'
+                                    ),
+                                    MessageTemplateAction(
+                                        label='youtube',
+                                        text='youtubeㄛ'
+                                    ),
+                                    MessageTemplateAction(
+                                        label='網頁',
+                                        text='網頁'
+                                    )
+                                ]
+                            )
                         )
                     )
-                )
                     
     line_bot_api.reply_message(
         event.reply_token,
