@@ -69,31 +69,32 @@ def handle_message(event):
                         )
                     )
                 )
-        if msg == "IG濾鏡":
-            print("Image Carousel")       
-            Image_Carousel = TemplateSendMessage(
-            alt_text='目錄 template',
-            template=ImageCarouselTemplate(
-            columns=[
-                ImageCarouselColumn(
-                    image_url='圖片網址',
-                    action=PostbackTemplateAction(
-                        label='postback1',
-                        text='postback text1',
-                        data='action=buy&itemid=1'
-                    )
-                ),
-                ImageCarouselColumn(
-                    image_url='圖片網址',
-                    action=PostbackTemplateAction(
-                        label='postback2',
-                        text='postback text2',
-                        data='action=buy&itemid=2'
-                    )
+    elif msg == "IG濾鏡":
+        print("Image Carousel")       
+        Image_Carousel = TemplateSendMessage(
+        alt_text='目錄 template',
+        template=ImageCarouselTemplate(
+        columns=[
+            ImageCarouselColumn(
+                image_url='圖片網址',
+                action=PostbackTemplateAction(
+                    label='postback1',
+                    text='postback text1',
+                    data='action=buy&itemid=1'
                 )
-            ]
-        )
-        )
+            ),
+            ImageCarouselColumn(
+                image_url='圖片網址',
+                action=PostbackTemplateAction(
+                    label='postback2',
+                    text='postback text2',
+                    data='action=buy&itemid=2'
+                )
+            )
+        ]
+    )
+    )
+    return
                     
     line_bot_api.reply_message(
         event.reply_token,
