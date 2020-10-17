@@ -82,9 +82,9 @@ def handle_message(event):
                             title='瑋彥的作品集',
                             text='請選擇作品',
                             actions=[
-                                URIAction(
+                                URITemplateAction(
                                     label='IG濾鏡',
-                                    uri=https://www.instagram.com/ar/1507952719375055/
+                                    uri='https://www.instagram.com/ar/1507952719375055/'
                                 ),
                                 MessageTemplateAction(
                                     label='youtube',
