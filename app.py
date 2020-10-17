@@ -73,11 +73,8 @@ def handle_message(event):
                         )
                     )
                 )
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=r))           
-    if msg == "IG濾鏡":
-        print("Image Carousel")       
+    elif msg == "IG濾鏡":
+        print("IG濾鏡")       
         Image_Carousel = TemplateSendMessage(
         alt_text='目錄 template',
         template=ImageCarouselTemplate(
