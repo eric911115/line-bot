@@ -44,10 +44,9 @@ def handle_message(event):
         r = '小可愛'
     elif msg == '為什麼要瑋彥':
         r = '太可愛'
-
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=))
+        TextSendMessage(text=r))
 
 
 if __name__ == "__main__":
