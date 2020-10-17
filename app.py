@@ -7,7 +7,11 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage,
+    MessageEvent, TextMessage,
+     TextSendMessage,
+    TemplateSendMessage,
+    ButtonsTemplate,
+    MessageTemplateAction
 )
 
 app = Flask(__name__)
@@ -47,18 +51,33 @@ def handle_message(event):
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=r))
-    
-    line_bot_api.RichMenu(
-    size=RichMenuSize(width=2500, height=843),
-    selected=False,
-    name="Nice richmenu",
-    chat_bar_text="Tap here",
-    areas=[RichMenuArea(
-        bounds=RichMenuBounds(x=0, y=0, width=2500, height=843),
-        action=URIAction(label='Go to line.me', uri='https://line.me'))]
-)
-line_bot_api.create_rich_menu(rich_menu=rich_menu_to_create)
-print(rich_menu_id)
+
+    if event.message.text == "關於瑋彥":
+ 
+                    line_bot_api.reply_message(  # 回復傳入的訊息文字
+                        event.reply_token,
+                        TemplateSendMessage(
+                            alt_text='Buttons template',
+                            template=ButtonsTemplate(
+                                title='Menu',
+                                text='請選擇地區',
+                                actions=[
+                                    MessageTemplateAction(
+                                        label='台北市',
+                                        text='台北市'
+                                    ),
+                                    MessageTemplateAction(
+                                        label='台中市',
+                                        text='台中市'
+                                    ),
+                                    MessageTemplateAction(
+                                        label='高雄市',
+                                        text='高雄市'
+                                    )
+                                ]
+                            )
+                        )
+                    )
 
 
 if __name__ == "__main__":
