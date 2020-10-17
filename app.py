@@ -73,7 +73,7 @@ def handle_message(event):
                         )
                     )
                 )
-        elif msg == "IG濾鏡":
+    elif msg == 'IG濾鏡':
                     line_bot_api.reply_message(  # 回復傳入的訊息文字
                         event.reply_token,
                         TemplateSendMessage(
