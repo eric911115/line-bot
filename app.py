@@ -44,11 +44,7 @@ def handle_message(event):
     msg = event.message.text
     r = '我想上大學，想要知道為什麼請打"關於瑋彥"'
 
-    if msg == '你好' :
-        r = '你好'
-    elif msg == '為什麼要瑋彥':
-        r = '太可愛'
-    elif msg == "關於瑋彥":
+    if msg == "關於瑋彥":
                 line_bot_api.reply_message(  # 回復傳入的訊息文字
                     event.reply_token,
                     TemplateSendMessage(
@@ -73,31 +69,31 @@ def handle_message(event):
                         )
                     )
                 )
-    elif msg == "IG濾鏡":
-        print("Image Carousel")       
-        Image_Carousel = TemplateSendMessage(
-        alt_text='目錄 template',
-        template=ImageCarouselTemplate(
-        columns=[
-            ImageCarouselColumn(
-                image_url='圖片網址',
-                action=PostbackTemplateAction(
-                    label='postback1',
-                    text='postback text1',
-                    data='action=buy&itemid=1'
+        if msg == "IG濾鏡":
+            print("Image Carousel")       
+            Image_Carousel = TemplateSendMessage(
+            alt_text='目錄 template',
+            template=ImageCarouselTemplate(
+            columns=[
+                ImageCarouselColumn(
+                    image_url='圖片網址',
+                    action=PostbackTemplateAction(
+                        label='postback1',
+                        text='postback text1',
+                        data='action=buy&itemid=1'
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url='圖片網址',
+                    action=PostbackTemplateAction(
+                        label='postback2',
+                        text='postback text2',
+                        data='action=buy&itemid=2'
+                    )
                 )
-            ),
-            ImageCarouselColumn(
-                image_url='圖片網址',
-                action=PostbackTemplateAction(
-                    label='postback2',
-                    text='postback text2',
-                    data='action=buy&itemid=2'
-                )
-            )
-        ]
-    )
-    )
+            ]
+        )
+        )
                     
     line_bot_api.reply_message(
         event.reply_token,
