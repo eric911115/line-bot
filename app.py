@@ -57,7 +57,7 @@ def handle_message(event):
                         columns=[
                             ImageCarouselColumn(
                                 image_url='https://i.ibb.co/jfJpM2W/S-33800212.jpg',
-                                action=PostbackTemplateAction(
+                                action=[PostbackTemplateAction(
                                     label='postback1',
                                     text='postback text1',
                                     data='action=buy&itemid=1'
@@ -69,11 +69,12 @@ def handle_message(event):
                                     label='postback1',
                                     text='postback text1',
                                     data='action=buy&itemid=1'
-                            )
-                        )                         
+                                )
+                                )
+                                ]                         
+                        )
                     )
                 )
-            )
     elif msg == "關於瑋彥":
                 line_bot_api.reply_message(  # 回復傳入的訊息文字
                     event.reply_token,
