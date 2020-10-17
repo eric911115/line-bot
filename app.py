@@ -49,7 +49,7 @@ def handle_message(event):
     elif msg == '為什麼要瑋彥':
         r = '太可愛'
     elif msg == "IG濾鏡":
-                print("Image Carousel")       
+                print("IG濾鏡")       
                 Image_Carousel = TemplateSendMessage(
                 alt_text='目錄 template',
                 template=ImageCarouselTemplate(
