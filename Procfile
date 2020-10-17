@@ -1,1 +1,1 @@
-wed gunucorn app:app
+wed gunicorn app:app
