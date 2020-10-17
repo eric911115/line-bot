@@ -72,6 +72,7 @@ def handle_message(event):
                     )
                 ]
                 )
+                )
     elif msg == "關於瑋彥":
                 line_bot_api.reply_message(  # 回復傳入的訊息文字
                     event.reply_token,
