@@ -54,20 +54,20 @@ def handle_message(event):
                         TemplateSendMessage(
                             alt_text='Buttons template',
                             template=ButtonsTemplate(
-                                title='Menu',
-                                text='請選擇地區',
+                                title='瑋彥的作品集',
+                                text='請選擇作品',
                                 actions=[
                                     MessageTemplateAction(
-                                        label='台北市',
-                                        text='台北市'
+                                        label='IG濾鏡',
+                                        text='IG濾鏡'
                                     ),
                                     MessageTemplateAction(
-                                        label='台中市',
-                                        text='台中市'
+                                        label='youtuber',
+                                        text='youtuber'
                                     ),
-                                    MessageTemplateAction(
-                                        label='高雄市',
-                                        text='高雄市'
+                                    #MessageTemplateAction(
+                                       # label='高雄市',
+                                        #text='高雄市'
                                     )
                                 ]
                             )
