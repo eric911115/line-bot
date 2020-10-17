@@ -48,7 +48,7 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text=r))
     
-    rich_menu_to_create = RichMenu(
+    line_bot_api.RichMenu(
     size=RichMenuSize(width=2500, height=843),
     selected=False,
     name="Nice richmenu",
