@@ -49,31 +49,29 @@ def handle_message(event):
     elif msg == '為什麼要瑋彥':
         r = '太可愛'
     elif msg == "IG濾鏡":
-                line_bot_api.reply_message(  # 回復傳入的訊息文字
-                    event.reply_token,
-                    TemplateSendMessage(
-                        alt_text='目錄 template',
-                        template=ImageCarouselTemplate(
-                        columns=[
-                            ImageCarouselColumn(
-                                image_url='https://i.ibb.co/jfJpM2W/S-33800212.jpg',
-                                action=[PostbackTemplateAction(
-                                    label='postback1',
-                                    text='postback text1',
-                                    data='action=buy&itemid=1'
-                                ),
-                                ImageCarouselColumn(
-                                image_url='https://i.ibb.co/jfJpM2W/S-33800212.jpg',
-                                action=PostbackTemplateAction(
-                                    label='postback1',
-                                    text='postback text1',
-                                    data='action=buy&itemid=1'
-                                )
-                                )
-                                ]                         
-                        )
-                    )
+                print("Image Carousel")       
+                Image_Carousel = TemplateSendMessage(
+                alt_text='目錄 template',
+                template=ImageCarouselTemplate(
+                columns=[
+                    ImageCarouselColumn(
+                        image_url='https://i.ibb.co/jfJpM2W/S-33800212.jpg',
+                        action=PostbackTemplateAction(
+                            label='postback1',
+                            text='postback text1',
+                            data='action=buy&itemid=1'
                 )
+            ),
+                    ImageCarouselColumn(
+                        image_url='https://i.ibb.co/jfJpM2W/S-33800212.jpg',
+                        action=PostbackTemplateAction(
+                            label='postback1',
+                            text='postback text1',
+                            data='action=buy&itemid=1'
+                )
+            )
+        ]
+    )
     elif msg == "關於瑋彥":
                 line_bot_api.reply_message(  # 回復傳入的訊息文字
                     event.reply_token,
