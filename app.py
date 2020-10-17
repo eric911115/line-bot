@@ -38,12 +38,13 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    r = '我想上大學'
+    r = '我想上大學，想要知道為什麼請打"關於瑋彥"'
 
     if msg == '關於瑋彥' :
         r = '小可愛'
     elif msg == '為什麼要瑋彥':
         r = '太可愛'
+
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=))
