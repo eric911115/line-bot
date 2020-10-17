@@ -62,16 +62,17 @@ def handle_message(event):
                                         text='IG濾鏡'
                                     ),
                                     MessageTemplateAction(
-                                        label='youtuber',
-                                        text='youtuber'
+                                        label='youtube',
+                                        text='youtube'
                                     ),
-                                    #MessageTemplateAction(
-                                       # label='高雄市',
-                                        #text='高雄市'
+                                    MessageTemplateAction(
+                                        label='網頁',
+                                        text='網頁'
                                     )
                                 ]
                             )
                         )
+                    )
                     
     line_bot_api.reply_message(
         event.reply_token,
