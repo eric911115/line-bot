@@ -48,7 +48,7 @@ def handle_message(event):
         r = '你好'
     elif msg == '為什麼要瑋彥':
         r = '太可愛'
-   elif msg == "IG濾鏡":
+    elif msg == "IG濾鏡":
                 line_bot_api.reply_message(  # 回復傳入的訊息文字
                     event.reply_token,
                     TemplateSendMessage(
