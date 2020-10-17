@@ -61,8 +61,7 @@ def handle_message(event):
                                     label='postback1',
                                     text='postback text1',
                                     data='action=buy&itemid=1'
-                                )
-                            ),
+                                ),
                                 ImageCarouselColumn(
                                 image_url='https://i.ibb.co/jfJpM2W/S-33800212.jpg',
                                 action=PostbackTemplateAction(
