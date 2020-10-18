@@ -16,17 +16,6 @@ from linebot.models import (
     ImageCarouselColumn,
     URITemplateAction   
 )
-def __check_error(response):
-        if 200 <= response.status_code < 300:
-            pass
-        else:
-            raise LineBotApiError(
-                status_code=response.status_code,
-                headers=dict(response.headers.items()),
-                request_id=response.headers.get('X-Line-Request-Id'),
-                accepted_request_id=response.headers.get('X-Line-Accepted-Request-Id'),
-                error=Error.new_from_json_dict(response.json)
-            )
 
 app = Flask(__name__)
 
@@ -97,7 +86,7 @@ def handle_message(event):
     elif msg == "關於瑋彥":
                 line_bot_api.reply_message(  # 回復傳入的訊息文字
                     event.reply_token,
-                    TemplateSendMessage(
+                image_carousel_template_message=TemplateSendMessage(
                         alt_text='Buttons template',
                         template=ButtonsTemplate(
                             title='瑋彥的作品集',
