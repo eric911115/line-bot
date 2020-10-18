@@ -94,7 +94,14 @@ def handle_message(event):
                                         label='學測倒數',
                                         url="https://i.ibb.co/jfJpM2W/S-33800212.jpg"
                                     )
-                                )
+                                ),
+                                ImageCarouselcolumn(
+                                    image_url="https://i.ibb.co/jfJpM2W/S-33800212.jpg",
+                                    actions=URITemplateAction(
+                                        label='學測倒數',
+                                        url="https://i.ibb.co/jfJpM2W/S-33800212.jpg"
+                                    )
+                                ),
                             ]
                         )
                     )
