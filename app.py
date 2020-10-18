@@ -13,7 +13,7 @@ from linebot.models import (
     ButtonsTemplate,
     MessageTemplateAction,
     ImageCarouselTemplate,
-    ImageCarouselcolumn
+    ImageCarouselColumn
 
 )
 
