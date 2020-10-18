@@ -49,30 +49,7 @@ def handle_message(event):
     elif msg == '為什麼要瑋彥':
         r = '太可愛'
     elif msg == "IG濾鏡":
-        button_template_message =ButtonsTemplate(
-                            thumbnail_image_url="https://i.imgur.com/eTldj2E.png?1",
-                            title='Menu', 
-                            text='Please select',
-                            ratio="1.51:1",
-                            image_size="cover",
-                            actions=[
-#                                PostbackTemplateAction 點擊選項後，
-#                                 除了文字會顯示在聊天室中，
-#                                 還回傳data中的資料，可
-#                                 此類透過 Postback event 處理。
-                                PostbackTemplateAction(
-                                    label='postback還會回傳data參數', 
-                                    text='postback text',
-                                    data='action=buy&itemid=1'
-                                ),
-                                MessageTemplateAction(
-                                    label='message會回傳text文字', text='message text'
-                                ),
-                                URITemplateAction(
-                                    label='uri可回傳網址', uri='http://www.xiaosean.website/'
-                                )
-                            ]
-                        )
+
     elif msg == "關於瑋彥":
                 line_bot_api.reply_message(  # 回復傳入的訊息文字
                     event.reply_token,
@@ -104,6 +81,27 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text=r))
     return
+button_template_message =ButtonsTemplate(
+                            thumbnail_image_url="https://i.imgur.com/eTldj2E.png?1",
+                            title='Menu', 
+                            text='Please select',
+                            ratio="1.51:1",
+                            image_size="cover",
+                            actions=[
+
+                                PostbackTemplateAction(
+                                    label='postback還會回傳data參數', 
+                                    text='postback text',
+                                    data='action=buy&itemid=1'
+                                ),
+                                MessageTemplateAction(
+                                    label='message會回傳text文字', text='message text'
+                                ),
+                                URITemplateAction(
+                                    label='uri可回傳網址', uri='http://www.xiaosean.website/'
+                                )
+                            ]
+                        )
 
     
 
