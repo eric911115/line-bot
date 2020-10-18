@@ -74,7 +74,7 @@ def handle_message(event):
                     )
                 )
     elif msg == "IG濾鏡":
-                buttons_template = TemplateSendMessage(
+            buttons_template = TemplateSendMessage(
                 alt_text='Buttons Template',
                 template=ButtonsTemplate(
                     title='這是ButtonsTemplate',
