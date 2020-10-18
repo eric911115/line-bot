@@ -12,6 +12,8 @@ from linebot.models import (
     TemplateSendMessage,
     ButtonsTemplate,
     MessageTemplateAction
+    ImageCarouselTemplate
+
 )
 
 app = Flask(__name__)
