@@ -79,7 +79,7 @@ def handle_message(event):
                     TemplateSendMessage(
                         alt_text='IG濾鏡',
                         template=ImageCarouselTemplate(
-                            column=[
+                            columns=[
                                 ImageCarouselcolumn(
                                     image_url='https://i.ibb.co/jfJpM2W/S-33800212.jpg',
                                     actions=URITemplateAction(
