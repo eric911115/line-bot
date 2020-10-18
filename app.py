@@ -54,9 +54,9 @@ def handle_message(event):
     elif msg == "IG濾鏡":
                 line_bot_api.reply_message(  # 回復傳入的訊息文字
                     event.reply_token,
-                image_carousel_template_message=TemplateSendMessage(
+                    TemplateSendMessage(
                         alt_text='IG濾鏡',
-                        template=ImageCarouselTemplate(
+                        image_carousel_template_message=ImageCarouselTemplate(
                             columns=[
                                 ImageCarouselColumn(
                                     image_url='https://i.ibb.co/jfJpM2W/S-33800212.jpg',
