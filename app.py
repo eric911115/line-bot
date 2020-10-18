@@ -40,39 +40,46 @@ def callback():
 
 
 @handler.add(MessageEvent, message=TextMessage)
-def handle_message(event):
-    msg = event.message.text
+def handle_message():
+    msg = message.text
     r = '我想上大學，想要知道為什麼請打"關於瑋彥"'
 
     if msg == '你好' :
         r = '你好'
     elif msg == '為什麼要瑋彥':
         r = '太可愛'
-     
-def Buttons_message():
-    message = TemplateSendMessage(
-        alt_text = 'IG濾鏡'
-        template = ButtonsTemplate(
-            thumbnail_image_url = ''
-            title = '學測倒數'
-            text = '學測倒數'
-            actions = [
-                MessageTemplateAction(
-                    label = "統測倒數"
-                    text = "水喔"
-                ),
-                MessageTemplateAction(
-                    label = "企鵝"
-                    text = "北極沒有企鵝"
+    elif msg == "關於瑋彥":
+                line_bot_api.reply_message(  # 回復傳入的訊息文字
+                    event.reply_token,
+                    TemplateSendMessage(
+                        alt_text='Buttons template',
+                        template=ButtonsTemplate(
+                            title='瑋彥的作品集',
+                            text='請選擇作品',
+                            actions=[
+                                MessageTemplateAction(
+                                    label='IG濾鏡',
+                                    text='IG濾鏡'
+                                ),
+                                MessageTemplateAction(
+                                    label='youtube',
+                                    text='youtube'
+                                ),
+                                MessageTemplateAction(
+                                    label='網頁',
+                                    text='網頁'
+                                )
+                            ]
+                        )
+                    )
                 )
-        
-            ]
-        )
-    )
-    return message
+    
+                    
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text = 'r'))
 
-
- 
+    
 
 
 if __name__ == "__main__":
