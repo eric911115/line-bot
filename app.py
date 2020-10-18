@@ -73,10 +73,11 @@ def handle_message(event):
                         )
                     )
                 )  
-                return msg
+    return msg
 
 
-    
+ def image_carousel_message1()
+    message =    
 
 
 if __name__ == "__main__":
