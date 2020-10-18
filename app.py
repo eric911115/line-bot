@@ -40,8 +40,8 @@ def callback():
 
 
 @handler.add(MessageEvent, message=TextMessage)
-def handle_message():
-    msg = message.text
+def handle_message(event):
+    msg = event.message.text
     r = '我想上大學，想要知道為什麼請打"關於瑋彥"'
 
     if msg == '你好' :
@@ -78,7 +78,40 @@ def handle_message():
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text = 'r'))
+ 
+def handle_message(event):
+    msg = event.message.text
+    r = '我想上大學，想要知道為什麼請打"關於瑋彥"'
 
+    if msg == "IG濾鏡":
+                line_bot_api.reply_message(  # 回復傳入的訊息文字
+                    event.reply_token,
+                    TemplateSendMessage(
+                        alt_text='Buttons template',
+                        template=ButtonsTemplate(
+                            title='學測倒數',
+                            text='請選擇作品',
+                            actions=[
+                                MessageTemplateAction(
+                                    label='學測倒數',
+                                    text='IG濾鏡'
+                                ),
+                                MessageTemplateAction(
+                                    label='youtube',
+                                    text='youtube'
+                                ),
+                                MessageTemplateAction(
+                                    label='網頁',
+                                    text='網頁'
+                                )
+                            ]
+                        )
+                    )
+                )
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text = 'r'))                
+                
     
 
 
