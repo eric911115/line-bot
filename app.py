@@ -74,6 +74,21 @@ def handle_message(event):
                     )
                 )  
     return msg
+def Buttons_message():
+    message = TemplateSendMessage(
+        alt_text = 'IG濾鏡'
+        template = ButtonsTemplate(
+            thumbnail_image_url = ''
+            title = '學測倒數'
+            text = '學測倒數'
+            actions = [
+                MessageTemplateAction(
+                    label = "統測倒數"
+                    text = "水喔"
+                )
+            ]
+        )
+    )
 
 
  
