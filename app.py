@@ -50,31 +50,6 @@ def handle_message(event):
         r = '你好'
     elif msg == '為什麼要瑋彥':
         r = '太可愛'
-    elif msg == "關於瑋彥":
-                line_bot_api.reply_message(  # 回復傳入的訊息文字
-                    event.reply_token,
-                    TemplateSendMessage(
-                        alt_text='Buttons template',
-                        template=ButtonsTemplate(
-                            title='瑋彥的作品集',
-                            text='請選擇作品',
-                            actions=[
-                                MessageTemplateAction(
-                                    label='IG濾鏡',
-                                    text='IG濾鏡'
-                                ),
-                                MessageTemplateAction(
-                                    label='youtube',
-                                    text='youtube'
-                                ),
-                                MessageTemplateAction(
-                                    label='網頁',
-                                    text='網頁'
-                                )
-                            ]
-                        )
-                    )
-                )
     elif msg == "IG濾鏡":
                 line_bot_api.reply_message(  # 回復傳入的訊息文字
                     event.reply_token,
@@ -106,7 +81,33 @@ def handle_message(event):
                             ]
                         )
                     )
+                )    
+    elif msg == "關於瑋彥":
+                line_bot_api.reply_message(  # 回復傳入的訊息文字
+                    event.reply_token,
+                    TemplateSendMessage(
+                        alt_text='Buttons template',
+                        template=ButtonsTemplate(
+                            title='瑋彥的作品集',
+                            text='請選擇作品',
+                            actions=[
+                                MessageTemplateAction(
+                                    label='IG濾鏡',
+                                    text='IG濾鏡'
+                                ),
+                                MessageTemplateAction(
+                                    label='youtube',
+                                    text='youtube'
+                                ),
+                                MessageTemplateAction(
+                                    label='網頁',
+                                    text='網頁'
+                                )
+                            ]
+                        )
+                    )
                 )
+    
               
                     
     line_bot_api.reply_message(
