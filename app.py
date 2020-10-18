@@ -14,9 +14,19 @@ from linebot.models import (
     MessageTemplateAction,
     ImageCarouselTemplate,
     ImageCarouselColumn,
-    URITemplateAction
-
+    URITemplateAction   
 )
+def __check_error(response):
+        if 200 <= response.status_code < 300:
+            pass
+        else:
+            raise LineBotApiError(
+                status_code=response.status_code,
+                headers=dict(response.headers.items()),
+                request_id=response.headers.get('X-Line-Request-Id'),
+                accepted_request_id=response.headers.get('X-Line-Accepted-Request-Id'),
+                error=Error.new_from_json_dict(response.json)
+            )
 
 app = Flask(__name__)
 
