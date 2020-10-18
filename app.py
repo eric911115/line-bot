@@ -81,29 +81,25 @@ def handle_message(event):
                     TemplateSendMessage(
                         alt_text='IG濾鏡',
                         template=ImageCarouselTemplate(
-                           # columns=[
+                            columns=[
                                 ImageCarouselcolumn(
                                     image_url='https://i.ibb.co/jfJpM2W/S-33800212.jpg',
-                                actions=[
-                                    URITemplateAction(
+                                    action=URITemplateAction(
                                         label='學測倒數',
                                         url="https://i.ibb.co/jfJpM2W/S-33800212.jpg",
-                                    )
-                                ),
+                                    ),                                    
                                 ImageCarouselcolumn(
                                     image_url="https://i.ibb.co/jfJpM2W/S-33800212.jpg",
-                                    actions=URITemplateAction(
+                                    action=URITemplateAction(
                                         label='學測倒數',
                                         url="https://i.ibb.co/jfJpM2W/S-33800212.jpg",
-                                    )
-                                ),
+                                    ),
                                 ImageCarouselcolumn(
                                     image_url="https://i.ibb.co/jfJpM2W/S-33800212.jpg",
-                                    actions=URITemplateAction(
+                                    action=URITemplateAction(
                                         label='學測倒數',
                                         url="https://i.ibb.co/jfJpM2W/S-33800212.jpg",
-                                    )
-                                ),
+                                    ),
                             ]
                         )
                     )
