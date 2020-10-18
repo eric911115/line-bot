@@ -77,22 +77,20 @@ def handle_message(event):
                 line_bot_api.reply_message(  # 回復傳入的訊息文字
                     event.reply_token,
                     TemplateSendMessage(
-                        alt_text='Buttons template',
-                        template=ButtonsTemplate(
-                            title='學測倒數',
-                            text='請選擇作品',
-                            actions=[
-                                MessageTemplateAction(
-                                    label='學測倒數',
-                                    text='IG濾鏡'
+                        alt_text='IG濾鏡',
+                        template=ImageCarouselTemplate(
+                            column=[
+                                ImageCarouselcolumn(
+                                    image_url='="https://i.ibb.co/jfJpM2W/S-33800212.jpg"',
+                                    actions=URITemplateAction(
+                                        label='學測倒數',
+                                        url="https://i.ibb.co/jfJpM2W/S-33800212.jpg
                                 ),
-                                MessageTemplateAction(
-                                    label='youtube',
-                                    text='youtube'
-                                ),
-                                MessageTemplateAction(
-                                    label='網頁',
-                                    text='網頁'
+                                image_url='="https://i.ibb.co/jfJpM2W/S-33800212.jpg"',
+                                    actions=URITemplateAction(
+                                        label='學測倒數',
+                                        url="https://i.ibb.co/jfJpM2W/S-33800212.jpg
+                                
                                 )
                             ]
                         )
