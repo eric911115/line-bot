@@ -45,6 +45,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
+    msg = msg.encode
     r = '我想上大學，想要知道為什麼請打"關於瑋彥"'
 
     if msg == '你好' :
@@ -52,9 +53,7 @@ def handle_message(event):
     elif msg == '為什麼要瑋彥':
         r = '太可愛'
     elif msg == "IG濾鏡":
-                line_bot_api.reply_message(  # 回復傳入的訊息文字
-                    event.reply_token,
-                    TemplateSendMessage(
+                image_carousel_template_message = TemplateSendMessage(
                         alt_text='IG濾鏡',
                         template=ImageCarouselTemplate(
                             columns=[
@@ -82,7 +81,9 @@ def handle_message(event):
                             ]
                         )
                     )
-                ) 
+                        line_bot_api.reply_message(event.reply_token,Image_Carousel)
+                 
+
                     
                    
     elif msg == "關於瑋彥":
