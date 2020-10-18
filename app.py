@@ -73,17 +73,7 @@ def handle_message(event):
                         )
                     )
                 )
-    
-                    
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(r))
- 
-def handle_message2(event):
-    msg = event.message.text
-    r = '我想上大學，想要知道為什麼請打"關於瑋彥"'
-
-    if msg == "IG濾鏡":
+    elif msg == "IG濾鏡":
                 line_bot_api.reply_message(  # 回復傳入的訊息文字
                     event.reply_token,
                     TemplateSendMessage(
@@ -107,10 +97,15 @@ def handle_message2(event):
                             ]
                         )
                     )
-                )
+                )    
+                    
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text = 'r'))                
+        TextSendMessage(r))
+ 
+
+
+             
                 
     
 
