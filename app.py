@@ -53,7 +53,7 @@ def handle_message(event):
     elif msg == '為什麼要瑋彥':
         r = '太可愛'
     elif msg == "IG濾鏡":
-                image_carousel_template_message = TemplateSendMessage(
+                    image_carousel_template_message = TemplateSendMessage(
                         alt_text='IG濾鏡',
                         template=ImageCarouselTemplate(
                             columns=[
@@ -80,7 +80,7 @@ def handle_message(event):
                                 )
                             ]
                         )
-                    )
+                )
                         line_bot_api.reply_message(event.reply_token,image_carousel_template_message)
                  
 
