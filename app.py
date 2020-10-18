@@ -11,7 +11,7 @@ from linebot.models import (
     TextSendMessage,
     TemplateSendMessage,
     ButtonsTemplate,
-    MessageTemplateAction
+    MessageTemplateAction,
     ImageCarouselTemplate
 
 )
