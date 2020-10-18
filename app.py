@@ -79,7 +79,7 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(r))
  
-def handle_message(event):
+def handle_message2(event):
     msg = event.message.text
     r = '我想上大學，想要知道為什麼請打"關於瑋彥"'
 
