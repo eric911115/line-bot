@@ -49,21 +49,21 @@ def handle_message(event):
                         alt_text='IG濾鏡',
                         template=ImageCarouselTemplate(
                             columns=[
-                                ImageCarouselcolumn(
+                                ImageCarouselColumn(
                                     image_url='https://i.ibb.co/jfJpM2W/S-33800212.jpg',
                                     action=URITemplateAction(
                                         label='學測倒數',
                                         url="https://i.ibb.co/jfJpM2W/S-33800212.jpg",
                                     )
                                 ),                                    
-                                ImageCarouselcolumn(
+                                ImageCarouselColumn(
                                     image_url="https://i.ibb.co/jfJpM2W/S-33800212.jpg",
                                     action=URITemplateAction(
                                         label='學測倒數',
                                         url="https://i.ibb.co/jfJpM2W/S-33800212.jpg",
                                     )
                                 ),
-                                ImageCarouselcolumn(
+                                ImageCarouselColumn(
                                     image_url="https://i.ibb.co/jfJpM2W/S-33800212.jpg",
                                     action=URITemplateAction(
                                         label='學測倒數',
