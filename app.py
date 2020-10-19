@@ -51,8 +51,37 @@ def handle_message(event):
     if msg == '你好' :
         r = '你好'
     elif msg == '為什麼要瑋彥':
-        r = '太可愛'              
-    elif msg == "IG濾鏡":
+        r = '太可愛'            
+    elif msg == "關於瑋彥":
+                line_bot_api.reply_message(  # 回復傳入的訊息文字
+                    event.reply_token,
+                    TemplateSendMessage(
+                        alt_text='Buttons template',
+                        template=ButtonsTemplate(
+                            thumbnail_image_url="https://risu.io/YIRX",
+                            title='瑋彥的作品集',
+                            text='請選擇濾鏡',
+                            actions=[
+                                MessageTemplateAction(
+                                    label="IG濾鏡",
+                                    text="我想看IG濾鏡"
+                                URITemplateAction(
+                                    label="統測倒數",
+                                    uri="https://www.instagram.com/ar/1233861126969567/"
+                                ),
+                                URITemplateAction(
+                                    label="北極沒有企鵝",
+                                    uri="https://www.instagram.com/ar/651213445816757/"
+                                ),
+                                URITemplateAction(
+                                    label="學測戰士",
+                                    uri="https://www.instagram.com/ar/690111801715364/"
+                                )
+                            ]
+                        )
+                    )
+                )  
+    elif msg == "我想看IG濾鏡":
                 line_bot_api.reply_message(  # 回復傳入的訊息文字
                     event.reply_token,
                     TemplateSendMessage(
