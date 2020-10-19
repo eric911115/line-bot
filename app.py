@@ -45,6 +45,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
+
     r = '我想上大學，想要知道為什麼請打"關於瑋彥"'
 
     if msg == '你好' :
@@ -60,9 +61,9 @@ def handle_message(event):
                             title='瑋彥的作品集',
                             text='請選擇作品',
                             actions=[
-                                URITemplateAction(
-                                    label='IG濾鏡',
-                                    url='https://i.ibb.co/jfJpM2W/S-33800212.jpg'
+                                MessageTemplateAction(
+                                    label='youtube',
+                                    text='youtube'
                                 ),
                                 MessageTemplateAction(
                                     label='youtube',
