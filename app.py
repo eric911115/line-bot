@@ -52,27 +52,31 @@ def handle_message(event):
         r = '你好'
     elif msg == '為什麼要瑋彥':
         r = '太可愛'              
-    elif msg == "關於瑋彥":
+    elif msg == "IG濾鏡":
                 line_bot_api.reply_message(  # 回復傳入的訊息文字
                     event.reply_token,
                     TemplateSendMessage(
                         alt_text='Buttons template',
                         template=ButtonsTemplate(
                             thumbnail_image_url="https://i.ibb.co/jfJpM2W/S-33800212.jpg",
-                            title='瑋彥的作品集',
-                            text='請選擇作品',
+                            title='濾鏡作品',
+                            text='請選擇濾鏡',
                             actions=[
-                                MessageTemplateAction(
-                                    label='youtube',
-                                    text='youtube'
-                                ),
-                                MessageTemplateAction(
-                                    label='youtube',
-                                    text='youtube'
+                                URITemplateAction(
+                                    label="學測倒數",
+                                    uri="https://www.instagram.com/ar/1507952719375055/"
                                 ),
                                 URITemplateAction(
-                                    label="免費註冊享回饋",
-                                    uri="https://tw.shop.com/nbts/create-myaccount.xhtml?returnurl=https%3A%2F%2Ftw.shop.com%2F"
+                                    label="統測倒數",
+                                    uri="https://www.instagram.com/ar/1233861126969567/"
+                                ),
+                                URITemplateAction(
+                                    label="北極沒有企鵝",
+                                    uri="https://www.instagram.com/ar/651213445816757/"
+                                ),
+                                URITemplateAction(
+                                    label="學測戰士",
+                                    uri="https://www.instagram.com/ar/690111801715364/"
                                 )
                             ]
                         )
