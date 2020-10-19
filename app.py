@@ -67,17 +67,13 @@ def handle_message(event):
                                     text="我想看IG濾鏡"
                                 ),
                                 URITemplateAction(
-                                    label="統測倒數",
-                                    uri="https://www.instagram.com/ar/1233861126969567/"
+                                    label="Youtube",
+                                    uri="https://www.youtube.com/channel/UCH5tUrNXpr1x4pHpQGhfQXA?view_as=subscriber"
                                 ),
                                 URITemplateAction(
-                                    label="北極沒有企鵝",
-                                    uri="https://www.instagram.com/ar/651213445816757/"
-                                ),
-                                URITemplateAction(
-                                    label="學測戰士",
-                                    uri="https://www.instagram.com/ar/690111801715364/"
-                                )
+                                    label="網頁",
+                                    uri="https://eric911115.github.io/school.html"
+                                )                       
                             ]
                         )
                     )
