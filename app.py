@@ -52,36 +52,7 @@ def handle_message(event):
         r = '你好'
     elif msg == '為什麼要瑋彥':
         r = '太可愛'
-    elif msg == "IG濾鏡"
-                    image_carousel_template_message = TemplateSendMessage(
-                        alt_text='IG濾鏡',
-                        template=ImageCarouselTemplate(
-                            columns=[
-                                ImageCarouselColumn(
-                                    image_url='https://i.ibb.co/jfJpM2W/S-33800212.jpg',
-                                    action=URITemplateAction(
-                                        label='學測倒數',
-                                        url="https://i.ibb.co/jfJpM2W/S-33800212.jpg",
-                                    )
-                                ),                                    
-                                ImageCarouselColumn(
-                                    image_url="https://i.ibb.co/jfJpM2W/S-33800212.jpg",
-                                    action=URITemplateAction(
-                                        label='學測倒數',
-                                        url="https://i.ibb.co/jfJpM2W/S-33800212.jpg",
-                                    )
-                                ),
-                                ImageCarouselColumn(
-                                    image_url="https://i.ibb.co/jfJpM2W/S-33800212.jpg",
-                                    action=URITemplateAction(
-                                        label='學測倒數',
-                                        url="https://i.ibb.co/jfJpM2W/S-33800212.jpg",
-                                    )
-                                )
-                            ]
-                        )
-                    )
-            line_bot_api.reply_message(event.reply_token, image_carousel_template_message)
+    
                  
 
                     
@@ -95,9 +66,10 @@ def handle_message(event):
                             title='瑋彥的作品集',
                             text='請選擇作品',
                             actions=[
-                                MessageTemplateAction(
+                                URITemplateAction(
                                     label='IG濾鏡',
                                     text='IG濾鏡'
+                                    url='https://i.ibb.co/jfJpM2W/S-33800212.jpg'
                                 ),
                                 MessageTemplateAction(
                                     label='youtube',
