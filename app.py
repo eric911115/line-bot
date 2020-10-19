@@ -120,12 +120,11 @@ def handle_message(event):
                                         uri="https://www.instagram.com/ar/690111801715364/"
                                     )
                                 ),
-                                    )
-                                )
-                            ]
                         )
                     )
+                            ]
                 )
+                    
     
               
                     
