@@ -89,7 +89,7 @@ def handle_message(event):
                                     image_url="https://upload.cc/i1/2020/10/19/EjDUGz.jpg",
                                     action=URITemplateAction(
                                         label="學測倒數",
-                                        uri="hhttps://www.instagram.com/ar/1507952719375055/"
+                                        uri="https://www.instagram.com/ar/1507952719375055/"
                                     )
                                 ),
                                 ImageCarouselColumn(
