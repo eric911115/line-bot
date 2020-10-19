@@ -45,7 +45,6 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    msg = msg.encode
     r = '我想上大學，想要知道為什麼請打"關於瑋彥"'
 
     if msg == '你好' :
