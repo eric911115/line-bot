@@ -119,7 +119,7 @@ def handle_message(event):
                                         label="學測戰士",
                                         uri="https://www.instagram.com/ar/690111801715364/"
                                     )
-                                ),
+                                    )
                         )
                     )
                             ]
