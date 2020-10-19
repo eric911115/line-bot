@@ -83,26 +83,35 @@ def handle_message(event):
                     event.reply_token,
                     TemplateSendMessage(
                         alt_text='Buttons template',
-                        template=ButtonsTemplate(
-                            thumbnail_image_url="https://i.ibb.co/jfJpM2W/S-33800212.jpg",
-                            title='濾鏡作品',
-                            text='請選擇濾鏡',
-                            actions=[
-                                URITemplateAction(
-                                    label="學測倒數",
-                                    uri="https://www.instagram.com/ar/1507952719375055/"
+                        template=ImageCarouselTemplate(
+                            columns=[
+                                ImageCarouselColumn(
+                                    image_url="https://i.imgur.com/uKYgfVs.jpg",
+                                    action=URITemplateAction(
+                                        label="新鮮水果",
+                                        uri="http://img.juimg.com/tuku/yulantu/110709/222-110F91G31375.jpg"
+                                    )
                                 ),
-                                URITemplateAction(
-                                    label="統測倒數",
-                                    uri="https://www.instagram.com/ar/1233861126969567/"
+                                ImageCarouselColumn(
+                                    image_url="https://i.imgur.com/QOcAvjt.jpg",
+                                    action=URITemplateAction(
+                                        label="新鮮蔬菜",
+                                        uri="https://cdn.101mediaimage.com/img/file/1410464751urhp5.jpg"
+                                    )
                                 ),
-                                URITemplateAction(
-                                    label="北極沒有企鵝",
-                                    uri="https://www.instagram.com/ar/651213445816757/"
+                                ImageCarouselColumn(
+                                    image_url="https://i.imgur.com/Np7eFyj.jpg",
+                                    action=URITemplateAction(
+                                        label="可愛狗狗",
+                                        uri="http://imgm.cnmo-img.com.cn/appimg/screenpic/big/674/673928.JPG"
+                                    )
                                 ),
-                                URITemplateAction(
-                                    label="學測戰士",
-                                    uri="https://www.instagram.com/ar/690111801715364/"
+                                ImageCarouselColumn(
+                                    image_url="https://i.imgur.com/QRIa5Dz.jpg",
+                                    action=URITemplateAction(
+                                        label="可愛貓咪",
+                                        uri="https://m-miya.net/wp-content/uploads/2014/07/0-065-1.min_.jpg"
+                                    )
                                 )
                             ]
                         )
