@@ -65,6 +65,7 @@ def handle_message(event):
                                 MessageTemplateAction(
                                     label="IG濾鏡",
                                     text="我想看IG濾鏡"
+                                ),
                                 URITemplateAction(
                                     label="統測倒數",
                                     uri="https://www.instagram.com/ar/1233861126969567/"
