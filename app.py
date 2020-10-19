@@ -113,7 +113,7 @@ def handle_message(event):
                                         uri="https://www.instagram.com/ar/603244753687030/"
                                     )
                                 ),
-                                    ImageCarouselColumn(
+                                ImageCarouselColumn(
                                     image_url="https://upload.cc/i1/2020/10/19/VneW4d.jpg",
                                     action=URITemplateAction(
                                         label="學測戰士",
