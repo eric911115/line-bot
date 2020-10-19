@@ -70,9 +70,9 @@ def handle_message(event):
                                     label='youtube',
                                     text='youtube'
                                 ),
-                                MessageTemplateAction(
-                                    label='網頁',
-                                    text='網頁'
+                                URITemplateAction(
+                                    label="免費註冊享回饋",
+                                    uri="https://tw.shop.com/nbts/create-myaccount.xhtml?returnurl=https%3A%2F%2Ftw.shop.com%2F"
                                 )
                             ]
                         )
