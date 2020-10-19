@@ -68,7 +68,6 @@ def handle_message(event):
                             actions=[
                                 URITemplateAction(
                                     label='IG濾鏡',
-                                    text='IG濾鏡'
                                     url='https://i.ibb.co/jfJpM2W/S-33800212.jpg'
                                 ),
                                 MessageTemplateAction(
