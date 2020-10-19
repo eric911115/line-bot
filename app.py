@@ -58,7 +58,7 @@ def handle_message(event):
                     TemplateSendMessage(
                         alt_text='Buttons template',
                         template=ButtonsTemplate(
-                            thumbnail_image_url="https://risu.io/YIRX",
+                            thumbnail_image_url="https://risu.io/EDaK",
                             title='瑋彥的作品集',
                             text='請選擇濾鏡',
                             actions=[
