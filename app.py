@@ -58,7 +58,7 @@ def handle_message(event):
                     TemplateSendMessage(
                         alt_text='Buttons template',
                         template=ButtonsTemplate(
-                            thumbnail_image_url="https://upload.cc/i1/2020/10/19/Qoylcz.jpg",
+                            thumbnail_image_url="https://lh3.googleusercontent.com/BMF7I7RSG8IapEoOiF_3mDwk30pYQsnWLmhP51ww0rhEZkiTJ6CBHrMxMUjQFoIREbgmi_krIJdbPS-gSzGMA8C2e3muiy0cSzJ33pFAm_6iKuKA9x1A9ooFuVB9ZRNX5dVCUE2m4Q=w600",
                             title='瑋彥的作品集',
                             text='請選擇濾鏡',
                             actions=[
@@ -86,10 +86,10 @@ def handle_message(event):
                         template=ImageCarouselTemplate(
                             columns=[
                                 ImageCarouselColumn(
-                                    image_url="https://i.imgur.com/uKYgfVs.jpg",
+                                    image_url="https://upload.cc/i1/2020/10/19/EjDUGz.jpg",
                                     action=URITemplateAction(
-                                        label="新鮮水果",
-                                        uri="http://img.juimg.com/tuku/yulantu/110709/222-110F91G31375.jpg"
+                                        label="學測倒數",
+                                        uri="hhttps://www.instagram.com/ar/1507952719375055/"
                                     )
                                 ),
                                 ImageCarouselColumn(
