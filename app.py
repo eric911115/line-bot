@@ -58,6 +58,7 @@ def handle_message(event):
                     TemplateSendMessage(
                         alt_text='Buttons template',
                         template=ButtonsTemplate(
+                            thumbnail_image_url="https://pic2.zhimg.com/v2-de4b8114e8408d5265503c8b41f59f85_b.jpg",
                             title='瑋彥的作品集',
                             text='請選擇作品',
                             actions=[
