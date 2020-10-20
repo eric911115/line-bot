@@ -60,18 +60,18 @@ def handle_message(event):
                         template=ButtonsTemplate(
                             thumbnail_image_url="https://lh3.googleusercontent.com/BMF7I7RSG8IapEoOiF_3mDwk30pYQsnWLmhP51ww0rhEZkiTJ6CBHrMxMUjQFoIREbgmi_krIJdbPS-gSzGMA8C2e3muiy0cSzJ33pFAm_6iKuKA9x1A9ooFuVB9ZRNX5dVCUE2m4Q=w600",
                             title='瑋彥的作品集',
-                            text='請選擇濾鏡',
+                            text='請選擇作品',
                             actions=[
                                 MessageTemplateAction(
                                     label="IG濾鏡",
                                     text="我想看IG濾鏡"
                                 ),
                                 URITemplateAction(
-                                    label="Youtube",
+                                    label="影片剪輯作品",
                                     uri="https://www.youtube.com/channel/UCH5tUrNXpr1x4pHpQGhfQXA?view_as=subscriber"
                                 ),
                                 URITemplateAction(
-                                    label="網頁",
+                                    label="程式碼網頁設計",
                                     uri="https://eric911115.github.io/school.html"
                                 )                       
                             ]
