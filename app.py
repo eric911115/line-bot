@@ -46,7 +46,7 @@ def callback():
 def handle_message(event):
     msg = event.message.text
 
-    r = '我想上大學，想要知道為什麼請打"關於瑋彥"'
+    r = '想要多了解請打"關於瑋彥"'
 
     if msg == '你好' :
         r = '你好'
@@ -56,7 +56,7 @@ def handle_message(event):
                 line_bot_api.reply_message(  # 回復傳入的訊息文字
                     event.reply_token,
                     TemplateSendMessage(
-                        alt_text='Buttons template',
+                        alt_text='關於瑋彥',
                         template=ButtonsTemplate(
                             thumbnail_image_url="https://lh3.googleusercontent.com/BMF7I7RSG8IapEoOiF_3mDwk30pYQsnWLmhP51ww0rhEZkiTJ6CBHrMxMUjQFoIREbgmi_krIJdbPS-gSzGMA8C2e3muiy0cSzJ33pFAm_6iKuKA9x1A9ooFuVB9ZRNX5dVCUE2m4Q=w600",
                             title='瑋彥的作品集',
@@ -82,7 +82,7 @@ def handle_message(event):
                 line_bot_api.reply_message(  # 回復傳入的訊息文字
                     event.reply_token,
                     TemplateSendMessage(
-                        alt_text='Buttons template',
+                        alt_text='IG濾鏡',
                         template=ImageCarouselTemplate(
                             columns=[
                                 ImageCarouselColumn(
@@ -128,13 +128,6 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(r))
  
-
-
-
-
-             
-                
-    
 
 
 if __name__ == "__main__":
