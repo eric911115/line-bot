@@ -46,7 +46,7 @@ def callback():
 def handle_message(event):
     msg = event.message.text
 
-    r = '想要多了解請打"關於瑋彥"'
+    #r = '想要多了解請打"關於瑋彥"'
 
     if msg == '你好' :
         r = '你好'
